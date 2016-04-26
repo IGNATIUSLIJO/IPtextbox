@@ -1,0 +1,12 @@
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\IPtextbox.csprojResolveAssemblyReference.cache
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\IPtextbox_MarkupCompile.cache
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\IPtextbox_MarkupCompile.lref
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\bin\Debug\IPtextbox.dll
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\bin\Debug\IPtextbox.pdb
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\IPtextbox.g.resources
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\IPtextbox.Properties.Resources.resources
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\IPtextbox.csproj.GenerateResource.Cache
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\IPtextbox.dll
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\IPtextbox.pdb
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\MainControl.g.cs
+C:\Users\ig299335\Documents\Visual Studio 2013\Projects\IPtextbox\IPtextbox\obj\Debug\MainControl.baml
