@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
@@ -23,6 +23,22 @@ namespace IPtextbox
     public partial class IPTextBox : UserControl
     {
         private const string errorMessage = "Please specify a value between 0 and 255.";
+
+        public static readonly DependencyProperty Ip_tabindexProperty = DependencyProperty.Register(
+          "Ip_tabindex", typeof(int), typeof(IPTextBox));
+
+    
+        /// <summary>
+        /// Gets or sets tab index for ip box
+        /// </summary>
+        public int Ip_tabindex
+        {
+            get { return (int)GetValue(Ip_tabindexProperty); }
+            set { SetValue(Ip_tabindexProperty, value); InvalidateVisual(); }
+        }
+
+      
+       
         public IPTextBox()
         {
             InitializeComponent();
@@ -36,6 +52,38 @@ namespace IPtextbox
             text3.Text = Convert.ToString(bytesToFill[2]);
             text4.Text = Convert.ToString(Convert.ToString(bytesToFill[3]));
         }
+        public void FirstbyteFocus()
+       {
+           text1.Focus();
+       }
+        public void SecondbyteFocus()
+        {
+            text2.Focus();
+        }
+        public void ThirdbyteFocus()
+        {
+            text3.Focus();
+        }
+        public void FourthbyteFocus()
+        {
+            text4.Focus();
+        }
+        public void FirstbyteClear()
+        {
+            text1.Clear();
+        }
+        public void SecondbyteClear()
+        {
+            text2.Clear();
+        }
+        public void ThirdbyteClear()
+        {
+            text3.Clear();
+        }
+        public void FourthbyteClear()
+        {
+            text4.Clear();
+        }
         public string FirstByte { get { return text1.Text; } set { text1.Text = Convert.ToString(value); } }
 
         public string SecondByte { get { return text2.Text; } set { text2.Text = Convert.ToString(value); } }
@@ -44,13 +92,14 @@ namespace IPtextbox
 
         public string FourthByte { get { return text4.Text; } set { text4.Text = Convert.ToString(value); } }
 
-        public bool FirstByteFocus { get { return text1.IsFocused; } }
-        public bool SecondByteFocus { get { return text2.IsKeyboardFocused; } }
-        public bool ThirdByteFocus { get { return text3.IsKeyboardFocused; } }
-        public bool FourthByteFocus { get { return text4.IsKeyboardFocused; } }
+        public bool IsFirstByteFocus { get { return text1.IsFocused; } }
+        public bool IsSecondByteFocus { get { return text2.IsKeyboardFocused; } }
+        public bool IsThirdByteFocus { get { return text3.IsKeyboardFocused; } }
+        public bool IsFourthByteFocus { get { return text4.IsKeyboardFocused; } }
 
         private void textbox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+           
             //get detail of text box which triggered the event
             TextBox tt = (TextBox)sender;
 
@@ -93,7 +142,7 @@ namespace IPtextbox
                     prev_textbox.CaretIndex = prev_textbox.Text.Length;
                 }
             }
-            else if (e.Key == Key.OemPeriod || e.Key == Key.Space)
+            else if (e.Key == Key.OemPeriod || e.Key == Key.Space ||e.Key==Key.Decimal)
             {
                 if (next_textbox.Name == Current_textbox.Name || Current_textbox.Text == "")
                 { e.Handled = true; }
@@ -113,7 +162,7 @@ namespace IPtextbox
                     e.Handled = true;
 
             }
-            else if (e.Key == Key.Right || e.Key == Key.Down || e.Key == Key.Decimal)
+            else if (e.Key == Key.Right || e.Key == Key.Down )
             {
                 if (next_textbox.Name == Current_textbox.Name && Current_textbox.CaretIndex == Current_textbox.Text.Length)
                 { e.Handled = true; }
@@ -208,9 +257,5 @@ namespace IPtextbox
            
             text1.SelectAll();
         }
-
-
-                
-      
     }
 }
